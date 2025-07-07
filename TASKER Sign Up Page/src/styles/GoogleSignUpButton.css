@@ -1,0 +1,73 @@
+.google-signup-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.google-signup-btn:hover:not(:disabled) {
+  border-color: var(--text-muted);
+  background: #fafafa;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-light);
+}
+
+.google-signup-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.google-signup-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.google-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.google-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.google-text {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .google-signup-btn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .google-signup-btn {
+    gap: 0.5rem;
+  }
+  
+  .google-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .google-text {
+    font-size: 0.9rem;
+  }
+}
